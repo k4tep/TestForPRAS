@@ -1,0 +1,60 @@
+.slider-card {
+    position: relative;
+
+    display: flex;
+    width: 300px;
+    height: 289px;
+    background: white;
+    border-radius: 8px;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 320px) {
+        width: 290px;
+        height: 289px;
+
+        flex: 0 0 100%;
+        scroll-snap-align: start;
+    }
+
+    .svg {
+        position: absolute;
+        left: 70px;
+    }
+
+    .avatar {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    h1 {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    h2 {
+        font-weight: 400;
+        font-size: 11px;
+        line-height: 100%;
+        letter-spacing: 5%;
+        text-align: center;
+        text-transform: uppercase;
+        margin-bottom: 0;
+    }
+
+    p {
+        font-weight: 300;
+        font-size: 20px;
+        line-height: 25px;
+        letter-spacing: 0%;
+        text-align: center;
+        color: #00000099;
+    }
+}
