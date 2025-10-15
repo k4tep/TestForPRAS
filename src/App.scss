@@ -17,7 +17,7 @@ main {
         @media (max-width: 768px) {
             margin: 40px 10px 24px;
         }
-        @media (max-width: 768px) {
+        @media (max-width: 320px) {
             margin: 30px 15px 14px;
         }
     }
@@ -28,11 +28,6 @@ main {
         grid-template-columns: 640px 640px;
         justify-items: center;
         justify-content: center;
-        // display: flex;
-        // flex-wrap: wrap;
-        // flex-direction: row;
-        // gap: 40px;
-        // margin: 0 300px 60px;
 
         @media (max-width: 768px) {
             & {
