@@ -19,25 +19,15 @@ header {
     flex-direction: column;
     justify-content: space-between;
 
-    @media (max-width: 320px) {
+    @media (max-width: 550px) {
         height: 250px;
     }
 
     .nav-container {
         display: flex;
         align-items: center;
-        justify-content: space-around;
-
-        @media (max-width: 768px) {
-            & {
-                justify-content: space-between;
-                margin: 0 10px;
-            }
-        }
-
-        @media (max-width: 320px) {
-            margin: 30px 15px 42px;
-        }
+        justify-content: space-between;
+        padding: 20px clamp(12px, 6vw, 40px);
 
         p {
             font-family: 'Millimetre', sans-serif;
@@ -51,14 +41,15 @@ header {
                 color: #f01b0d;
             }
 
-            @media (max-width: 320px) {
+            @media (max-width: 550px) {
                 margin: 0;
             }
         }
 
         nav {
             display: flex;
-            gap: 50px;
+            gap: clamp(12px, 3vw, 50px);
+
             a {
                 font-weight: 400;
                 font-size: 12px;
@@ -119,17 +110,17 @@ header {
     }
 
     .main-news-container {
-        width: 640px;
+        width: min(640px, 92%);
         align-self: center;
-        margin-top: 60px;
+        margin-top: clamp(24px, 6vw, 60px);
 
         @media (max-width: 768px) {
             & {
-                width: 574px;
+                width: min(574px, 90%);
             }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             width: 91%;
             margin: 0;
         }
@@ -153,7 +144,7 @@ header {
             color: #ffffff;
             margin-top: 0;
 
-            @media (max-width: 320px) {
+            @media (max-width: 550px) {
                 font-size: 20px;
                 line-height: 100%;
             }
@@ -167,7 +158,7 @@ header {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 50px;
+        gap: clamp(8px, 4vw, 50px);
 
         @media (max-width: 768px) {
             & {
@@ -182,7 +173,7 @@ header {
             }
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             gap: 5px;
         }
 

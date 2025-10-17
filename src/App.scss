@@ -13,11 +13,12 @@ main {
         line-height: 100%;
         letter-spacing: 5%;
         text-transform: uppercase;
-        margin: 40px 300px 24px;
+        margin: 40px clamp(16px, 8vw, 300px) 24px;
+
         @media (max-width: 768px) {
             margin: 40px 10px 24px;
         }
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             margin: 30px 15px 14px;
         }
     }
@@ -25,18 +26,19 @@ main {
     .news-wrapper {
         display: grid;
         gap: 60px 40px;
-        grid-template-columns: 640px 640px;
-        justify-items: center;
+        grid-template-columns: 50% 50%;
         justify-content: center;
+        justify-items: center;
+        width: 100%;
+        max-width: 1320px;
+        margin: 0 auto;
 
-        @media (max-width: 768px) {
-            & {
-                gap: 40px 30px;
-                grid-template-columns: 360px 360px;
-            }
+        @media (max-width: 1350px) {
+            gap: 40px 30px;
+            grid-template-columns: 47% 47%;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             gap: 30px;
             grid-template-columns: 100%;
         }
@@ -51,23 +53,22 @@ main {
                 justify-content: space-between;
                 padding: 12px 0;
 
-                @media (max-width: 768px) {
-                    gap: 40px 90px;
+                @media (max-width: 1050px) {
                     display: grid;
-                    grid-template-columns: 300px 300px;
+                    grid-template-columns: 50% 50%;
                     justify-items: center;
                     justify-content: center;
                 }
 
-                @media (max-width: 320px) {
-                    & {
-                        display: flex;
-                        justify-content: start;
-                        overflow-x: auto;
-                        scroll-snap-type: x mandatory;
-                        scroll-behavior: smooth;
-                        -webkit-overflow-scrolling: touch;
-                    }
+                @media (max-width: 550px) {
+                    gap: 15px;
+
+                    display: flex;
+                    justify-content: start;
+                    overflow-x: auto;
+                    scroll-snap-type: x mandatory;
+                    scroll-behavior: smooth;
+                    -webkit-overflow-scrolling: touch;
 
                     &::-webkit-scrollbar {
                         display: none;
@@ -94,7 +95,7 @@ main {
             align-items: center;
             justify-content: center;
 
-            @media (max-width: 320px) {
+            @media (max-width: 550px) {
                 height: 276px;
             }
 
@@ -113,7 +114,7 @@ main {
                 div {
                     width: 396px;
 
-                    @media (max-width: 320px) {
+                    @media (max-width: 550px) {
                         width: 264px;
                     }
 
@@ -126,7 +127,7 @@ main {
                         color: #ffffff99;
                         margin-bottom: 0;
 
-                        @media (max-width: 320px) {
+                        @media (max-width: 550px) {
                             font-size: 14px;
                             line-height: 18px;
                         }
@@ -137,7 +138,7 @@ main {
             div {
                 width: 640px;
 
-                @media (max-width: 320px) {
+                @media (max-width: 550px) {
                     width: 246px;
                 }
 
@@ -151,7 +152,7 @@ main {
                     margin: 0;
                     margin-bottom: 14px;
 
-                    @media (max-width: 320px) {
+                    @media (max-width: 550px) {
                         letter-spacing: 4%;
                     }
                 }
@@ -164,7 +165,7 @@ main {
                     color: #ffffff;
                     margin-top: 0;
 
-                    @media (max-width: 320px) {
+                    @media (max-width: 550px) {
                         font-size: 20px;
                         line-height: 100%;
                     }
@@ -178,15 +179,23 @@ main {
         display: flex;
         gap: 40px;
         justify-content: center;
+        transition: gap 220ms ease, margin 220ms ease;
 
-        @media (max-width: 768px) {
-            & {
-                margin: 40px 0;
-                gap: 20px;
-            }
+        @media (max-width: 1420px) {
+            margin: 50px 0;
+            gap: 30px;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 1350px) {
+            gap: 20px;
+        }
+
+        @media (max-width: 768px) {
+            margin: 40px 0;
+            gap: 20px;
+        }
+
+        @media (max-width: 550px) {
             flex-direction: column;
             margin: 30px 0 60px;
         }
@@ -199,7 +208,7 @@ main {
             text-transform: uppercase;
             margin: 0;
             margin-bottom: 24px;
-            @media (max-width: 320px) {
+            @media (max-width: 550px) {
                 margin: 0 15px 14px;
             }
         }
@@ -216,12 +225,20 @@ main {
                 cursor: pointer;
             }
 
-            @media (max-width: 768px) {
+            @media (max-width: 1420px) {
+                padding: 66px 60px;
+            }
+
+            @media (max-width: 1350px) {
+                padding: 66px 50px;
+            }
+
+            @media (max-width: 900px) {
                 padding: 66px 48px;
                 gap: 12px;
             }
 
-            @media (max-width: 320px) {
+            @media (max-width: 760px) {
                 padding: 36px 16px;
                 flex-wrap: wrap;
             }
@@ -233,14 +250,20 @@ main {
             display: flex;
             gap: 20px;
 
-            @media (max-width: 768px) {
+            @media (max-width: 1420px) {
+                & {
+                    padding: 70px 20px;
+                }
+            }
+
+            @media (max-width: 1060px) {
                 gap: 24px;
                 padding: 44px 12px;
                 display: flex;
                 flex-direction: column;
             }
 
-            @media (max-width: 320px) {
+            @media (max-width: 550px) {
                 align-items: center;
             }
 
@@ -250,6 +273,11 @@ main {
                 border: none;
                 background-color: #000000;
                 border-bottom: 1px solid #ffffff4d;
+
+                @media (max-width: 1350px) {
+                    width: 100%;
+                }
+
                 @media (max-width: 768px) {
                     width: 200px;
                 }

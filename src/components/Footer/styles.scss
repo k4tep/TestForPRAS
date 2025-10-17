@@ -6,23 +6,23 @@ footer {
     align-items: center;
     gap: 50px;
 
-    @media (max-width: 320px) {
+    @media (max-width: 550px) {
     }
 
     .text-top-wrapper {
         display: flex;
         justify-content: center;
         align-items: flex-start;
-        gap: 268px;
+        gap: clamp(20px, 12vw, 268px);
         padding-top: 32px;
         width: 100%;
 
         @media (max-width: 768px) {
-            gap: 102px;
+            gap: clamp(12px, 8vw, 102px);
             padding-top: 33px;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             flex-direction: column;
             align-items: center;
             gap: 40px;
@@ -50,7 +50,7 @@ footer {
         }
 
         div {
-            @media (max-width: 320px) {
+            @media (max-width: 550px) {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
@@ -59,7 +59,6 @@ footer {
                 text-transform: none;
             }
             p {
-                font-family: Roboto Flex;
                 font-weight: 300;
                 font-size: 14px;
                 line-height: 100%;
@@ -79,7 +78,7 @@ footer {
             cursor: pointer;
         }
 
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             padding: 0 16px;
             flex-wrap: wrap;
         }
@@ -91,7 +90,7 @@ footer {
         justify-content: space-around;
         padding-bottom: 22px;
 
-        @media (max-width: 320px) {
+        @media (max-width: 550px) {
             flex-direction: column;
             align-items: center;
         }
